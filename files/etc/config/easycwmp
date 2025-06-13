@@ -1,0 +1,27 @@
+config local
+	option enable '1'
+	option interface 'eth0.5'
+	option port '7547'
+	option ubus_socket '/var/run/ubus.sock'
+	option date_format '%FT%T%z'
+	option authentication 'Digest'
+	option logging_level '1'
+	option username 'username'
+	option password 'password'
+
+config acs
+	option periodic_enable '1'
+	option username 'admin'
+	option password 'admin'
+	option periodic_time '1970-01-01T14:48:22.143Z'
+	option url 'http://url.com'
+	option periodic_interval '15'
+
+config device
+	option oui 'INVENDIS_SILBO'
+	option serial_number 'SILBO1234'
+	option hardware_version 'v0'
+	option software_version 'r11063-85e04e9f46'
+	option product_class 'Generic'
+	option manufacturer 'INVENDIS'
+	

@@ -1,0 +1,14 @@
+src-git custom https://github.com/amrutajoshi13/custom-Gateway-feed.git
+src-git openwisp_config https://github.com/openwisp/openwisp-config.git
+src-git openwisp_monitoring https://github.com/openwisp/openwrt-openwisp-monitoring.git
+src-git packages https://git.openwrt.org/feed/packages.git^2e6bd4cb86682b224803325127d3f777d40b3231
+src-git luci https://git.openwrt.org/project/luci.git^fb2f36306756d0d0782dcab8413a8bb7ec379e54
+#src-git luci https://github.com/openwrt/luci.git
+#src-git luci2 https://github.com/jow-/luci-ng.git
+src-git routing https://git.openwrt.org/feed/routing.git^3f8571194c2765ed31aa73459e86c2ebf943d27d
+src-git telephony https://git.openwrt.org/feed/telephony.git^036cd451c35b82b3d8cac519864986894d9f6958
+#src-git luci https://github.com/Hostle/openwrt-luci-multi-user.git
+#~ src-cpy esg1kgenericpackage :/home/anusha/Anusha_workspace/Projects/openwrt/openwrt_Build/Securico/feeds/esg1kgenericpackages
+#src-git esg1kgenericpackage https://github.com/ShreeshaRelysys/esg1kgenericpackage.git
+#src-git custom https://github.com/amrutajoshi13/custom-Gateway-feed.git
+#src-link custom ./custom-Gateway-feed/custom

@@ -1,0 +1,94 @@
+#!/bin/sh
+
+board_name=$(cat /tmp/sysinfo/board_name)
+touch /root/Web_page/Board_info.txt
+echo "board_name=$board_name" > /root/Web_page/Board_info.txt
+source /root/Web_page/Board_info.txt
+
+wan_mac_addr=$(hexdump -v -n 6 -s 0x2e -e '5/1 "%02X:" 1/1 "%02X"' /dev/mtd2)
+lan_mac_addr=$(hexdump -v -n 6 -s 0x28 -e '5/1 "%02X:" 1/1 "%02X"' /dev/mtd2)
+wifi_mac_addr=$(hexdump -v -n 6 -s 0x4 -e '5/1 "%02X:" 1/1 "%02X"' /dev/mtd2)
+serial_n=$(hexdump -v -n 6 -s 0x100 -e '5/1 "%02X:" 1/1 "%01X"' /dev/mtd2 | sed 's/://g')
+serial_number=${serial_n:0}
+imei_n=$(hexdump -v -n 8 -s 0x110 -e '7/1 "%02X:" 1/1 "%01X"' /dev/mtd2 | sed 's/://g')
+imei=${imei_n:0}
+logo_n=$(hexdump -v -n 1 -s 0x60 -e '7/1 "%02X:" 1/1 "%01X"' /dev/mtd2 | sed 's/://g')
+retainconfigflag1=$(uci get applist_config.appconfig.retainconfigflag1)
+#Wifi SSID 
+wifi_ssid="AP_$serial_number"
+wifi_guest_ssid="AP_GUEST_$serial_number"
+pcb_number="250-00092-02"
+
+#Update the required parameters in config files.
+uci set boardconfig.board.serialnum=$serial_number
+uci set boardconfig.board.wanmacid=$wan_mac_addr
+uci set boardconfig.board.lanmacid=$lan_mac_addr
+uci set boardconfig.board.wifimacid=$wifi_mac_addr
+uci set boardconfig.board.imei=$imei
+uci set boardconfig.board.pcbnum=$pcb_number
+uci commit boardconfig
+
+sleep 1
+if [ "$retainconfigflag1" = "0" ]
+then
+	uci set sysconfig.wificonfig.wifi1ssid=$wifi_ssid
+fi
+uci commit sysconfig
+
+sleep 1
+
+uci set system.system.hostname=$serial_number
+uci commit system
+
+sleep 1
+if [ "$retainconfigflag1" = "0" ]
+then
+uci set wireless.ap.ssid=$wifi_ssid
+uci commit wireless
+fi
+sleep 1
+
+#Update SSID in mt7628.dat file.
+if [ "$retainconfigflag1" = "0" ]
+then
+wirelessdatfile="/etc/wireless/mt7628/mt7628.dat"
+ssid=$(grep -w "SSID1" ${wirelessdatfile})        
+ssid_replace="SSID1=$wifi_ssid"
+sed -i "s/${ssid}/${ssid_replace}/" "$wirelessdatfile"
+fi
+uci set networkinterfaces.SW_LAN.macaddress=$lan_mac_addr
+uci set networkinterfaces.EWAN5.macaddress=$wan_mac_addr
+uci set network.EWAN5.macaddr=$wan_mac_addr
+uci commit networkinterfaces
+
+#Update SSID in mt7628.dat file.
+sysconfigssid="/root/InterfaceManager/config/sysconfig"
+sysconfigssid_val=$(grep -w "wifi1ssid" ${sysconfigssid})        
+sed -i "s|${sysconfigssid_val}|option wifi1ssid '$wifi_ssid'|g" "$sysconfigssid"
+
+
+
+uci commit sysconfig
+uci commit network
+sleep 2
+
+ssid_guest=$(grep -w "SSID2" ${wirelessdatfile})        
+ssid_guest_replace="SSID2=$wifi_guest_ssid"
+sed -i "s/${ssid_guest}/${ssid_guest_replace}/" "$wirelessdatfile"
+
+sleep 2
+cp  /etc/config/boardconfig  /root/InterfaceManager/config/
+if [ "$retainconfigflag1" = "0" ]
+then
+cp  /etc/config/system  /root/InterfaceManager/config/
+cp /etc/wireless/mt7628/mt7628.dat /root/InterfaceManager/mt7628/
+cp /etc/config/sysconfig  /root/InterfaceManager/config/
+cp /etc/config/network  /root/InterfaceManager/config/
+cp /etc/config/networkinterfaces  /root/InterfaceManager/config/
+fi
+uci set applist_config.appconfig.retainconfigflag1=0
+uci commit applist_config
+sleep 2
+sh /bin/read_calib.sh
+
+exit 0

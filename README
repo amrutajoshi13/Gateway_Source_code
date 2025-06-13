@@ -1,0 +1,156 @@
+FirmwareVersion - 1.11
+ApplicationVersion - 1.07
+
+
+Steps to Build Seurico Build.
+=============================
+
+Use the Ubuntu 16.04 Host PC
+
+Install the pre-required packages on Host PC :
+=============================================
+
+$ sudo apt update
+
+$ sudo apt install build-essential ccache ecj fastjar file g++ gawk \
+gettext git java-propose-classpath libelf-dev libncurses5-dev \
+libncursesw5-dev libssl-dev python python2.7-dev python3 unzip wget \
+python3-distutils-extra python3-distutils python3-setuptools python3-dev rsync subversion \
+swig time xsltproc zlib1g-dev 
+
+
+Download the Build to Host PC:
+============================== 
+
+$ git clone https://github.com/ShreeshaRelysys/Securico_Build.git
+
+This will ask for Username and Password
+
+Change the working directory to Build 
+
+$ cd Securico_Build
+
+Then follow below commands to build the Image for Securico Router
+
+$ ./scripts/feeds update -a
+$ ./scripts/feeds install -a
+
+
+Make the below changes to make build compatible to Securico Router
+===================================================================
+
+Change 1:
+---------
+
+<Build_Path>/package/feeds/luci/luci-base/Makefile
+
+Comment Make file line 29
+
+from 
+
+/etc/config/luci
+
+to
+
+#/etc/config/luci
+
+
+delete files 
+
+<Build_Path>/package/feeds/luci/luci-base/root/etc/config/luci
+<Build_Path>/package/feeds/luci/luci-base/root/usr/libexec
+<Build_Path>/package/feeds/luci/luci-base/root/usr/share/rpcd
+
+
+Change 2:
+---------
+
+<Build_Path>/package/feeds/packages/mwan3/Makefile
+
+Change from line 40 to 43
+
+define Package/mwan3/conffiles
+/etc/config/mwan3
+/etc/mwan3.user
+endef
+
+to
+
+#~ define Package/mwan3/conffiles
+#~ /etc/config/mwan3
+#~ /etc/mwan3.user
+#~ endef
+
+remove below files and folder
+
+
+<Build_Path>/package/feeds/packages/mwan3/files/etc/config
+
+<Build_Path>/package/feeds/packages/mwan3/files/etc/mwan3.user
+
+
+Change 3:
+---------
+
+<Build_Path>/package/feeds/packages/ntpclient/Makefile
+
+cahnege from line 49 and 50
+
+from
+
+$(INSTALL_DIR) $(1)/etc/config
+$(INSTALL_CONF) ./files/ntpclient.config $(1)/etc/config/ntpclient
+
+to
+
+#~ 	$(INSTALL_DIR) $(1)/etc/config
+#~ 	$(INSTALL_CONF) ./files/ntpclient.config $(1)/etc/config/ntpclient
+
+
+Change 4:
+---------
+
+<Build_Path>/package/feeds/packages/ddns-scripts/Makefile
+
+chnage from line 166 and 167
+
+from
+
+$(INSTALL_DIR)  $(1)/etc/config
+$(INSTALL_CONF) $(PKG_BUILD_DIR)/files/ddns.config $(1)/etc/config/ddns
+	
+	
+to
+
+# $(INSTALL_DIR)  $(1)/etc/config
+# $(INSTALL_CONF) $(PKG_BUILD_DIR)/files/ddns.config $(1)/etc/config/ddns
+
+
+Then select the required Relysys Package and Build the Image:
+=============================================================
+
+$ make menuconfig
+
+select the required Relysys Package then build the image using below command:
+
+$ make V=sc
+
+
+After build is success you will get the bin file and ipk in below path:
+========================================================================
+
+Bin:
+----
+<Build_Path>/bin/targets/ramips/mt76x8/openwrt-ramips-mt76x8-LinkIt7688-squashfs-sysupgrade.bin
+
+
+IPK:
+----
+<Build_Path>/bin/packages/mipsel_24kc/base/
+
+
+
+
+
+
+

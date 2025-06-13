@@ -1,0 +1,196 @@
+/dts-v1/;
+
+#include "mt7628an.dtsi"
+
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/input/input.h>
+
+/ {
+	compatible = "Silbo-RC44-EC25E", "mediatek,linkit-smart-7688", "mediatek,mt7628an-soc", "ralink,mt7628an-soc";
+	model = "Silbo RC44 EC25E";
+
+	aliases {
+		led-boot = &led_wifi;
+		led-failsafe = &led_wifi;
+		led-running = &led_wifi;
+		led-upgrade = &led_wifi;
+	};
+
+	chosen {
+		bootargs = "console=ttyS0,115200";
+	};
+
+	aliases {
+		serial0 = &uartlite;
+	};
+
+    i2cgpio {
+		compatible = "i2c-gpio";
+		gpios = <&gpio0 5 0 &gpio0 4 0>;
+		i2c-gpio,delay-us = <10>;
+		status = "okay";
+		
+		rtc@51 {
+		compatible = "nxp,pcf8563";
+        reg = <0x51>;
+        };
+        
+        pca95xx@77 {
+		compatible = "nxp,pca9539";
+        reg = <0x77>;        
+        };
+
+	};
+	
+	memory@0 {
+		device_type = "memory";
+		reg = <0x0 0x8000000>;
+	};
+
+    pinctrl {
+		state_default: pinctrl0 {
+			gpio {
+				ralink,group = "gpio";
+				ralink,function = "gpio";
+			};
+			perst {
+				ralink,group = "perst";
+				ralink,function = "gpio";
+			};
+			refclk {
+				ralink,group = "refclk";
+				ralink,function = "gpio";
+			};
+			i2s {
+				ralink,group = "i2s";
+				ralink,function = "gpio";
+			};
+			spis {
+				ralink,group = "spis";
+				ralink,function = "gpio";
+			};
+			
+			i2c {
+				ralink,group = "i2c";
+				ralink,function = "gpio";
+			};
+			
+			wled_an {
+				ralink,group = "wled_an";
+				ralink,function = "gpio";
+		    };
+			
+			p0led_an {
+				ralink,group = "p0led_an";
+				ralink,function = "p0led_an";
+			};
+			
+			p1led_an {
+				ralink,group = "p1led_an";
+				ralink,function = "p1led_an";
+			};
+			
+			p2led_an {
+				ralink,group = "p2led_an";
+				ralink,function = "gpio";
+			};
+			
+			p3led_an {
+				ralink,group = "p3led_an";
+				ralink,function = "gpio";
+			};
+			
+			p4led_an {
+				ralink,group = "p4led_an";
+				ralink,function = "p4led_an";
+			};
+		};
+	};
+
+	leds {
+		compatible = "gpio-leds";
+
+		led_wifi: wifi {
+			label = "linkit-smart-7688:orange:wifi";
+			gpios = <&gpio1 12 GPIO_ACTIVE_LOW>;
+		};
+	};
+
+};
+
+
+&spi0 {
+	status = "okay";
+
+	pinctrl-names = "default";
+	pinctrl-0 = <&spi_pins>, <&spi_cs1_pins>;
+
+	m25p80@0 {
+		compatible = "jedec,spi-nor";
+		reg = <0>;
+		spi-max-frequency = <40000000>;
+
+		partitions {
+			compatible = "fixed-partitions";
+			#address-cells = <1>;
+			#size-cells = <1>;
+
+			partition@0 {
+				label = "u-boot";
+				reg = <0x0 0x30000>;
+				read-only;
+			};
+
+			partition@30000 {
+				label = "u-boot-env";
+				reg = <0x30000 0x10000>;
+			};
+
+			factory: partition@40000 {
+				label = "factory";
+				reg = <0x40000 0x10000>;
+			};
+
+			partition@50000 {
+				compatible = "denx,uimage";
+				label = "firmware";
+				reg = <0x50000 0x1fb0000>;
+			};
+		};
+	};
+
+	spidev@1 {
+		#address-cells = <1>;
+		#size-cells = <1>;
+		compatible = "linux,spidev";
+		reg = <1>;
+		spi-max-frequency = <40000000>;
+	};
+};
+
+
+&uartlite{
+	status = "okay";
+};
+
+&uart1 {
+	status = "okay";
+};
+
+
+&pwm {
+	status = "okay";
+};
+
+
+&ethernet {
+	mtd-mac-address = <&factory 0x28>;
+	mediatek,portmap = "llllw";
+};
+
+ 
+
+
+&wmac {
+	status = "okay";
+};
