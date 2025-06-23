@@ -1,12 +1,12 @@
 /dts-v1/;
 
-#include "invmt7628an.dtsi"
+#include "mt7628an.dtsi"
 
 #include <dt-bindings/gpio/gpio.h>
 #include <dt-bindings/input/input.h>
 
 / {
-	compatible = "Silbo_IA44-C_GW", "mediatek,linkit-smart-7688", "mediatek,invmt7628an-soc", "ralink,mt7628an-soc";
+	compatible = "Silbo_IA44-C_GW", "mediatek,linkit-smart-7688", "mediatek,mt7628an-soc", "ralink,mt7628an-soc";
 	model = "Silbo_IA44-C_GW";
 
 	aliases {
@@ -93,17 +93,17 @@
 			
 			p2led_an {
 				ralink,group = "p2led_an";
-				ralink,function = "gpio";
+				ralink,function = "p2led_an";
 			};
 			
 			p3led_an {
 				ralink,group = "p3led_an";
-				ralink,function = "gpio";
+				ralink,function = "p3led_an";
 			};
 			
 			p4led_an {
 				ralink,group = "p4led_an";
-				ralink,function = "gpio";
+				ralink,function = "p4led_an";
 			};
 		};
 	};
@@ -152,10 +152,15 @@
 				reg = <0x40000 0x10000>;
 			};
 
-			partition@50000 {
+			partition@0000 {
 				compatible = "denx,uimage";
 				label = "firmware";
-				reg = <0x50000 0x1fb0000>;
+				reg = <0x50000 0x1fa0000>;
+			};
+			
+			partition@f00000 {
+				label = "user-data";
+				reg = <0x1ff0000 0x10000>;
 			};
 		};
 	};
@@ -178,15 +183,18 @@
 	status = "okay";
 };
 
-&uart2 {
+/*&uart2 {
 	status = "okay";
-};
+};*/
 
 
 &pwm {
 	status = "okay";
 };
 
+&i2s {
+   status = "disabled";
+};
 
 &ethernet {
 	mtd-mac-address = <&factory 0x28>;
@@ -198,7 +206,7 @@
 	status = "okay";
 };
 
-&sdhci {
+/*&sdhci {
 	status = "okay";
 	mediatek,cd-high;
-};
+};*/

@@ -68,34 +68,166 @@ ramips_setup_interfaces()
 	    ucidef_add_switch "switch0" \
 			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
 		;;
-	Silbo_IA44-A_GW)
+	Silbo_IA44-A)
 	    ucidef_add_switch "switch0" \
 			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
 		;;
+		
+	Silbo_IA04-A)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;
+			
 	Silbo_IA44-B_GW)
 	    ucidef_add_switch "switch0" \
 			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
 		;;
 		
-	Silbo_IAC44-B_GW)
+	Silbo_IAC44-C_GW)
 	    ucidef_add_switch "switch0" \
 			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
 		;;	
+		
+	Silbo_IAC44-A)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;		
 		
 	Silbo_IAB44-B_GW)
 	    ucidef_add_switch "switch0" \
 			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
 		;;
 		
+	Silbo_IAB44-C_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;
+		
+	Silbo_IAB44-DIO_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;		
+		
 	Silbo_GD44-A_GW)
 	    ucidef_add_switch "switch0" \
 			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
-		;;				
+		;;
+		
+	Silbo_GD44-B_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;	
+		
+	Silbo_GD44-C_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;
+		
+	Silbo_GD44-D_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;
+		
+	Silbo_GD44-E_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;
+		
+	Silbo_RF44-A_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;
+		
+	Silbo_RF04-A_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;	
+		
+	Silbo_RF44-B_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;
+		
+	Silbo_RF44-C_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;							
+
+    Silbo_PC312_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;	
+		
+	Silbo_PC310_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;
+		
+	Silbo_PC311_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;		
+		
+	Silbo_RB44-A_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;					
 	
 	Silbo_IC44_GW)
 	    ucidef_add_switch "switch0" \
 			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;	
+		
+	Silbo_IE44-B_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;
+	Silbo_IE44-C_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;
+		
+	Silbo_IE44-C-EX1_GW)
+	ucidef_add_switch "switch0" \
+		"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+	;;
+		
+	Silbo_GRD44B-5R_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
 		;;		
+	Silbo_GRD44B-3R_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;		
+	Silbo_GRD44C-5R_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;		
+	Silbo_GRD44C-3R_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;	
+		
+	Silbo_IAF44-A_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;	
+	Silbo_IAF44-C_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;
+		
+	Silbo_IAF44-C1_GW)
+	    ucidef_add_switch "switch0" \
+			"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+		;;
+		
+	Silbo_IAF44-C2_GW)
+    ucidef_add_switch "switch0" \
+		"0:lan:4" "1:lan:3" "2:lan:2" "3:lan:1" "4:wan:5" "6@eth0"
+	;;	
+				
 	m2m|\
 	microwrt|\
 	mikrotik,rbm11g|\
@@ -658,14 +790,20 @@ ramips_setup_macs()
 		wan_mac=$(mtd_get_mac_binary factory 4)
 		lan_mac=$(mtd_get_mac_binary factory 46)
 		;;
+	
 	Silbo-RC44-EC200A)
 		wan_mac=$(mtd_get_mac_binary factory 4)
 		lan_mac=$(mtd_get_mac_binary factory 46)
 		;;
-	Silbo_IA44-A_GW)
+	Silbo_IA44-A)
 		wan_mac=$(mtd_get_mac_binary factory 4)
 		lan_mac=$(mtd_get_mac_binary factory 46)
 		;;
+		
+	Silbo_IA04-A)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;	
 	Silbo_IA44-B_GW)
 		wan_mac=$(mtd_get_mac_binary factory 4)
 		lan_mac=$(mtd_get_mac_binary factory 46)
@@ -674,7 +812,7 @@ ramips_setup_macs()
 		wan_mac=$(mtd_get_mac_binary factory 4)
 		lan_mac=$(mtd_get_mac_binary factory 46)
 		;;	
-	Silbo_IAC44-B_GW)
+	Silbo_IAC44-C_GW)
 		wan_mac=$(mtd_get_mac_binary factory 4)
 		lan_mac=$(mtd_get_mac_binary factory 46)
 		;;	
@@ -682,6 +820,16 @@ ramips_setup_macs()
 		wan_mac=$(mtd_get_mac_binary factory 4)
 		lan_mac=$(mtd_get_mac_binary factory 46)
 		;;
+		
+	Silbo_IAB44-DIO_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;	
+		
+	Silbo_IAB44-C_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;	
 	Silbo_IC44_GW)
 		wan_mac=$(mtd_get_mac_binary factory 4)
 		lan_mac=$(mtd_get_mac_binary factory 46)
@@ -690,6 +838,106 @@ ramips_setup_macs()
 		wan_mac=$(mtd_get_mac_binary factory 4)
 		lan_mac=$(mtd_get_mac_binary factory 46)
 		;;	
+		
+	Silbo_GD44-B_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;
+		
+	Silbo_GD44-C_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;
+		
+	Silbo_GD44-D_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;
+		
+	Silbo_GD44-E_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;	
+		
+	Silbo_RF44-A_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;
+		
+	Silbo_RF44-B_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;
+		
+	Silbo_RF44-C_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;								
+
+	Silbo_PC312_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;
+		
+	Silbo_RB44-A_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;
+		
+	Silbo_IE44-B_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;
+		
+	Silbo_IE44-C_GW)
+	wan_mac=$(mtd_get_mac_binary factory 4)
+	lan_mac=$(mtd_get_mac_binary factory 46)
+	;;	
+	
+	Silbo_IE44-C-EX1_GW)
+	wan_mac=$(mtd_get_mac_binary factory 4)
+	lan_mac=$(mtd_get_mac_binary factory 46)
+	;;	
+	
+	Silbo_GRD44B-5R_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;
+	Silbo_GRD44B-3R_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;
+		
+	Silbo_GRD44C-5R_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;
+		
+	Silbo_GRD44C-3R_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;
+	
+	Silbo_IAF44-A_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;
+		
+	Silbo_IAF44-C_GW)
+	wan_mac=$(mtd_get_mac_binary factory 4)
+	lan_mac=$(mtd_get_mac_binary factory 46)
+	;;	
+			
+	Silbo_IAF44-C1_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;	
+	
+	Silbo_IAF44-C2_GW)
+		wan_mac=$(mtd_get_mac_binary factory 4)
+		lan_mac=$(mtd_get_mac_binary factory 46)
+		;;		
+				
 	mac1200rv2)
 		lan_mac=$(mtd_get_mac_binary factory_info 13)
 		wan_mac=$(macaddr_add "$lan_mac" 1)

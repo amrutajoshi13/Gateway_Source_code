@@ -121,14 +121,23 @@ define Device/Silbo-RC44-EC200A
 endef
 TARGET_DEVICES += Silbo-RC44-EC200A
 
-define Device/Silbo_IA44-A_GW
-  DTS := Silbo_IA44-A_GW
+define Device/Silbo_IA44-A
+  DTS := Silbo_IA44-A
   IMAGE_SIZE := $(ralink_default_fw_size_32M)
-  SUPPORTED_DEVICES := Silbo_IA44-A_GW 
-  DEVICE_TITLE := Silbo IA44-A_GW
+  SUPPORTED_DEVICES := Silbo_IA44-A 
+  DEVICE_TITLE := Silbo IA44-A
   DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
 endef
-TARGET_DEVICES += Silbo_IA44-A_GW
+TARGET_DEVICES += Silbo_IA44-A
+
+define Device/Silbo_IA04-A
+  DTS := Silbo_IA04-A
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_IA04-A 
+  DEVICE_TITLE := Silbo IA04-A
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_IA04-A
 
 define Device/Silbo_IA44-B_GW
   DTS := Silbo_IA44-B_GW
@@ -148,14 +157,23 @@ define Device/Silbo_IA44-C_GW
 endef
 TARGET_DEVICES += Silbo_IA44-C_GW
 
-define Device/Silbo_IAC44-B_GW
-  DTS := Silbo_IAC44-B_GW
+define Device/Silbo_IAC44-C_GW
+  DTS := Silbo_IAC44-C_GW
   IMAGE_SIZE := $(ralink_default_fw_size_32M)
-  SUPPORTED_DEVICES := Silbo_IAC44-B_GW 
-  DEVICE_TITLE := Silbo IAC44-B_GW
+  SUPPORTED_DEVICES := Silbo_IAC44-C_GW 
+  DEVICE_TITLE := Silbo IAC44-C_GW
   DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
 endef
-TARGET_DEVICES += Silbo_IAC44-B_GW
+TARGET_DEVICES += Silbo_IAC44-C_GW
+
+define Device/Silbo_IAC44-A
+  DTS := Silbo_IAC44-A
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_IAC44-A
+  DEVICE_TITLE := Silbo IAC44-A
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_IAC44-A
 
 
 define Device/Silbo_IAB44-B_GW
@@ -166,6 +184,24 @@ define Device/Silbo_IAB44-B_GW
   DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
 endef
 TARGET_DEVICES += Silbo_IAB44-B_GW
+
+define Device/Silbo_IAB44-C_GW
+  DTS := Silbo_IAB44-C_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_IAB44-C_GW 
+  DEVICE_TITLE := Silbo IAB44-C_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_IAB44-C_GW
+
+define Device/Silbo_IAB44-DIO_GW
+  DTS := Silbo_IAB44-DIO_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_IAB44-DIO_GW 
+  DEVICE_TITLE := Silbo IAB44-DIO_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_IAB44-DIO_GW
 
 
 define Device/Silbo_IC44_GW
@@ -185,6 +221,218 @@ define Device/Silbo_GD44-A_GW
   DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
 endef
 TARGET_DEVICES += Silbo_GD44-A_GW
+
+define Device/Silbo_GD44-B_GW
+  DTS := Silbo_GD44-B_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_GD44-B_GW 
+  DEVICE_TITLE := Silbo_GD44-B_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_GD44-B_GW
+
+define Device/Silbo_GD44-C_GW
+  DTS := Silbo_GD44-C_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_GD44-C_GW 
+  DEVICE_TITLE := Silbo_GD44-C_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_GD44-C_GW
+
+define Device/Silbo_GD44-D_GW
+  DTS := Silbo_GD44-D_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_GD44-D_GW 
+  DEVICE_TITLE := Silbo_GD44-D_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_GD44-D_GW
+
+define Device/Silbo_GD44-E_GW
+  DTS := Silbo_GD44-E_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_GD44-E_GW 
+  DEVICE_TITLE := Silbo_GD44-E_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_GD44-E_GW
+
+define Device/Silbo_RF44-A_GW
+  DTS := Silbo_RF44-A_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_RF44-A_GW 
+  DEVICE_TITLE := Silbo_RF44-A_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_RF44-A_GW
+
+define Device/Silbo_RF04-A_GW
+  DTS := Silbo_RF04-A_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_RF04-A_GW 
+  DEVICE_TITLE := Silbo_RF04-A_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_RF04-A_GW
+
+define Device/Silbo_RF44-B_GW
+  DTS := Silbo_RF44-B_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_RF44-B_GW 
+  DEVICE_TITLE := Silbo_RF44-B_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_RF44-B_GW
+
+define Device/Silbo_RF44-C_GW
+  DTS := Silbo_RF44-C_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_RF44-C_GW 
+  DEVICE_TITLE := Silbo_RF44-C_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_RF44-C_GW
+
+
+define Device/Silbo_PC312_GW
+  DTS := Silbo_PC312_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_PC312_GW 
+  DEVICE_TITLE := Silbo_PC312_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_PC312_GW
+
+define Device/Silbo_PC310_GW
+  DTS := Silbo_PC310_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_PC310_GW 
+  DEVICE_TITLE := Silbo_PC310_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_PC310_GW
+
+define Device/Silbo_PC311_GW
+  DTS := Silbo_PC311_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_PC311_GW 
+  DEVICE_TITLE := Silbo_PC311_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_PC311_GW
+
+define Device/Silbo_RB44-A_GW
+  DTS := Silbo_RB44-A_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_16M)
+  SUPPORTED_DEVICES := Silbo_RB44-A_GW 
+  DEVICE_TITLE := Silbo_RB44-A_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_RB44-A_GW
+
+define Device/Silbo_IE44-B_GW
+  DTS := Silbo_IE44-B_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_IE44-B_GW 
+  DEVICE_TITLE := Silbo IE44-B_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_IE44-B_GW
+
+define Device/Silbo_IE44-C_GW
+  DTS := Silbo_IE44-C_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_IE44-C_GW 
+  DEVICE_TITLE := Silbo_IE44-C_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_IE44-C_GW
+
+define Device/Silbo_IE44-C-EX1_GW
+  DTS := Silbo_IE44-C-EX1_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_IE44-C-EX1_GW
+  DEVICE_TITLE := Silbo_IE44-C-EX1_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_IE44-C-EX1_GW
+
+
+define Device/Silbo_GRD44B-5R_GW
+  DTS := Silbo_GRD44B-5R_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_GRD44B-5R_GW
+  DEVICE_TITLE := Silbo_GRD44B-5R_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_GRD44B-5R_GW
+
+
+define Device/Silbo_GRD44B-3R_GW
+  DTS := Silbo_GRD44B-3R_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_GRD44B-3R_GW
+  DEVICE_TITLE := Silbo_GRD44B-3R_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_GRD44B-3R_GW
+
+
+define Device/Silbo_GRD44C-5R_GW
+  DTS := Silbo_GRD44C-5R_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_GRD44C-5R_GW 
+  DEVICE_TITLE := Silbo_GRD44C-5R_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_GRD44C-5R_GW
+
+
+define Device/Silbo_GRD44C-3R_GW
+  DTS := Silbo_GRD44C-3R_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_GRD44C-3R_GW
+  DEVICE_TITLE := Silbo_GRD44C-3R_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_GRD44C-3R_GW
+
+define Device/Silbo_IAF44-A_GW
+  DTS := Silbo_IAF44-A_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_IAF44-A_GW 
+  DEVICE_TITLE := Silbo_IAF44-A_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_IAF44-A_GW
+
+define Device/Silbo_IAF44-C_GW
+  DTS := Silbo_IAF44-C_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_IAF44-C_GW 
+  DEVICE_TITLE := Silbo_IAF44-C_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_IAF44-C_GW
+
+define Device/Silbo_IAF44-C1_GW
+  DTS := Silbo_IAF44-C1_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_IAF44-C1_GW 
+  DEVICE_TITLE := Silbo_IAF44-C1_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_IAF44-C1_GW
+
+define Device/Silbo_IAF44-C2_GW
+  DTS := Silbo_IAF44-C2_GW
+  IMAGE_SIZE := $(ralink_default_fw_size_32M)
+  SUPPORTED_DEVICES := Silbo_IAF44-C2_GW 
+  DEVICE_TITLE := Silbo_IAF44-C2_GW
+  DEVICE_PACKAGES:= kmod-usb2 kmod-usb-ohci uboot-envtools
+endef
+TARGET_DEVICES += Silbo_IAF44-C2_GW
 
 define Device/LinkIt7688
   DTS := LINKIT7688

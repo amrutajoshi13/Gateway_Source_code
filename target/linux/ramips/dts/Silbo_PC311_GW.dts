@@ -1,13 +1,13 @@
 /dts-v1/;
 
-#include "invmt7628an.dtsi"
+#include "mt7628an.dtsi"
 
 #include <dt-bindings/gpio/gpio.h>
 #include <dt-bindings/input/input.h>
 
 / {
-	compatible = "SILBO,IA44-B_GW", "mediatek,linkit-smart-7688", "mediatek,invmt7628an-soc", "ralink,mt7628an-soc";
-	model = "Silbo IA44-B_GW";
+	compatible = "Silbo_PC311_GW", "mediatek,linkit-smart-7688", "mediatek,invmt7628an-soc", "ralink,mt7628an-soc";
+	model = "Silbo_PC311_GW";
 
 	aliases {
 		led-boot = &led_wifi;
@@ -35,11 +35,11 @@
         reg = <0x51>;
         };
         
-        pca95xx:pca95xx@20 {
+      /*  pca95xx:pca95xx@20 {
 		compatible = "nxp,pca9535";
         reg = <0x20>; 
            
-         };  
+         };  */
         
 	};
 	
@@ -76,7 +76,7 @@
 				ralink,function = "gpio";
 			};
 			
-			wled_an {
+		/*	wled_an {
 				ralink,group = "wled_an";
 				ralink,function = "gpio";
 		    };
@@ -84,14 +84,14 @@
 			p0led_an {
 				ralink,group = "p0led_an";
 				ralink,function = "p0led_an";
-			};
+			};*/
 			
 			p1led_an {
 				ralink,group = "p1led_an";
 				ralink,function = "p1led_an";
 			};
 			
-			p2led_an {
+			/*p2led_an {
 				ralink,group = "p2led_an";
 				ralink,function = "gpio";
 			};
@@ -104,10 +104,10 @@
 			p4led_an {
 				ralink,group = "p4led_an";
 				ralink,function = "gpio";
-			};
+			};*/
 		};
 	};
-
+	
 	leds {
 		compatible = "gpio-leds";
 
@@ -115,6 +115,12 @@
 			label = "linkit-smart-7688:orange:wifi";
 			gpios = <&gpio1 12 GPIO_ACTIVE_LOW>;
 		};
+	};
+     
+	bootstrap {
+		compatible = "mediatek,linkit";
+
+		status = "okay";
 	};
 
 };
@@ -195,7 +201,7 @@
 
 &ethernet {
 	mtd-mac-address = <&factory 0x28>;
-	mediatek,portmap = "llllw";
+	//mediatek,portmap = "llllw";
 };
 
 

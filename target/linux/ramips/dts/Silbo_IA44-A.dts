@@ -1,13 +1,13 @@
 /dts-v1/;
 
-#include "invmt7628an.dtsi"
+#include "mt7628an.dtsi"
 
 #include <dt-bindings/gpio/gpio.h>
 #include <dt-bindings/input/input.h>
 
 / {
-	compatible = "SILBO,IA44-B_GW", "mediatek,linkit-smart-7688", "mediatek,invmt7628an-soc", "ralink,mt7628an-soc";
-	model = "Silbo IA44-B_GW";
+	compatible = "Silbo_IA44-A", "mediatek,linkit-smart-7688", "mediatek,mt7628an-soc", "ralink,mt7628an-soc";
+	model = "Silbo_IA44-A";
 
 	aliases {
 		led-boot = &led_wifi;
@@ -35,11 +35,10 @@
         reg = <0x51>;
         };
         
-        pca95xx:pca95xx@20 {
-		compatible = "nxp,pca9535";
-        reg = <0x20>; 
-           
-         };  
+        pca95xx@20 {
+		compatible = "nxp,pca9539";
+        reg = <0x20>;        
+        };
         
 	};
 	
@@ -103,7 +102,7 @@
 			
 			p4led_an {
 				ralink,group = "p4led_an";
-				ralink,function = "gpio";
+				ralink,function = "p4led_an";
 			};
 		};
 	};
@@ -183,10 +182,6 @@
 	status = "okay";
 };
 
-&uart2 {
-	status = "okay";
-};
-
 
 &pwm {
 	status = "okay";
@@ -201,9 +196,4 @@
 
 &wmac {
 	status = "okay";
-};
-
-&sdhci {
-	status = "okay";
-	mediatek,cd-high;
 };

@@ -1,13 +1,13 @@
 /dts-v1/;
 
-#include "invmt7628an.dtsi"
+#include "mt7628an.dtsi"
 
 #include <dt-bindings/gpio/gpio.h>
 #include <dt-bindings/input/input.h>
 
 / {
-	compatible = "SILBO,IA44-B_GW", "mediatek,linkit-smart-7688", "mediatek,invmt7628an-soc", "ralink,mt7628an-soc";
-	model = "Silbo IA44-B_GW";
+	compatible = "Silbo_RF44-A_GW", "mediatek,linkit-smart-7688", "mediatek,mt7628dan-soc", "ralink,mt7628an-soc";
+	model = "Silbo_RF44-A_GW";
 
 	aliases {
 		led-boot = &led_wifi;
@@ -27,7 +27,7 @@
     i2cgpio {
 		compatible = "i2c-gpio";
 		gpios = <&gpio0 5 0 &gpio0 4 0>;
-		i2c-gpio,delay-us = <10>;
+		i2c-gpio,delay-us = <5>;
 		status = "okay";
 		
 		rtc@51 {
@@ -35,17 +35,25 @@
         reg = <0x51>;
         };
         
-        pca95xx:pca95xx@20 {
+      pca95xx:pca95xx@20 {
 		compatible = "nxp,pca9535";
         reg = <0x20>; 
            
-         };  
-        
+         };         
+             
+	 };
+	 
+	  i2cgpioextra {
+	  compatible = "i2c-gpio";
+	  gpios = <&gpio1 5 0 &gpio0 3 0>; 
+	  i2c-gpio,delay-us = <5>;
+	  status = "okay";
+	  debug = <1>;
 	};
-	
+ 	
 	memory@0 {
 		device_type = "memory";
-		reg = <0x0 0x8000000>;
+		reg = <0x0 0x4000000>;
 	};
 
     pinctrl {
@@ -73,8 +81,8 @@
 			
 			i2c {
 				ralink,group = "i2c";
-				ralink,function = "gpio";
-			};
+				ralink,function = "gpio";				
+		   };
 			
 			wled_an {
 				ralink,group = "wled_an";
@@ -103,6 +111,7 @@
 			
 			p4led_an {
 				ralink,group = "p4led_an";
+				//ralink,function = "p4led_an";
 				ralink,function = "gpio";
 			};
 		};
@@ -162,6 +171,8 @@
 				label = "user-data";
 				reg = <0x1ff0000 0x10000>;
 			};
+			
+			
 		};
 	};
 
@@ -174,6 +185,10 @@
 	};
 };
 
+&esw {
+	mediatek,portmap = <0x2>;
+	status = "okay";
+};
 
 &uartlite{
 	status = "okay";
@@ -186,7 +201,6 @@
 &uart2 {
 	status = "okay";
 };
-
 
 &pwm {
 	status = "okay";

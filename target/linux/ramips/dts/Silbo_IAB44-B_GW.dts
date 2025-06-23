@@ -166,10 +166,15 @@
 				reg = <0x40000 0x10000>;
 			};
 
-			partition@50000 {
+			partition@0000 {
 				compatible = "denx,uimage";
 				label = "firmware";
-				reg = <0x50000 0x1fb0000>;
+				reg = <0x50000 0x1fa0000>;
+			};
+			
+			partition@f00000 {
+				label = "user-data";
+				reg = <0x1ff0000 0x10000>;
 			};
 		};
 	};
@@ -209,4 +214,9 @@
 
 &wmac {
 	status = "okay";
+};
+
+&sdhci {
+	status = "okay";
+	mediatek,cd-high;
 };

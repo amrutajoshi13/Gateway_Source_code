@@ -280,9 +280,12 @@ ramips_board_detect() {
 	*"Silbo RC44 EC200A")
 		name="Silbo-RC44-EC200A"
 		;;	
-	*"Silbo IA44-A_GW")
-		name="Silbo_IA44-A_GW"
+	*"Silbo IA44-A")
+		name="Silbo_IA44-A"
 		;;	
+	*"Silbo IA04-A")
+		name="Silbo_IA04-A"
+		;;		
 	*"Silbo IA44-B_GW")
 		name="Silbo_IA44-B_GW"
 		;;
@@ -290,19 +293,104 @@ ramips_board_detect() {
 	*"Silbo IA44-C_GW")
 		name="Silbo_IA44-C_GW"
 		;;	
-	*"Silbo IAC44-B_GW")
-		name="Silbo_IAC44-B_GW"
+	*"Silbo IAC44-C_GW")
+		name="Silbo_IAC44-C_GW"
+		;;	
+		
+	*"Silbo IAC44-A")
+		name="Silbo_IAC44-A"
 		;;		
 		
 	*"Silbo IAB44-B_GW")
 		name="Silbo_IAB44-B_GW"
-		;;			
+		;;	
+	*"Silbo IAB44-C_GW")
+		name="Silbo_IAB44-C_GW"
+		;;	
+	*"Silbo IAB44-DIO_GW")
+		name="Silbo_IAB44-DIO_GW"
+		;;					
 	*"Silbo_IC44_GW")
 		name="Silbo_IC44_GW"
 		;;		
 	*"Silbo_GD44-A_GW")
 		name="Silbo_GD44-A_GW"
 		;;			
+	*"Silbo_GD44-B_GW")
+		name="Silbo_GD44-B_GW"
+		;;
+	*"Silbo_GD44-C_GW")
+		name="Silbo_GD44-C_GW"
+		;;		
+	*"Silbo_GD44-D_GW")
+		name="Silbo_GD44-D_GW"
+		;;
+	*"Silbo_GD44-E_GW")
+		name="Silbo_GD44-E_GW"
+		;;
+	*"Silbo_RF44-A_GW")
+		name="Silbo_RF44-A_GW"
+		;;	
+	*"Silbo_RF04-A_GW")
+		name="Silbo_RF04-A_GW"
+		;;		
+	*"Silbo_RF44-B_GW")
+		name="Silbo_RF44-B_GW"
+		;;
+	*"Silbo_RF44-C_GW")
+		name="Silbo_RF44-C_GW"
+		;;
+		
+	*"Silbo IE44-B_GW")
+		name="Silbo_IE44-B_GW"
+		;;				
+	*"Silbo IE44-C_GW")
+		name="Silbo_IE44-C_GW"
+		;;	
+	*"Silbo IE44-C-EX1_GW")
+	name="Silbo_IE44-C_GW"
+		;;	
+	*"Silbo GRD44B-5R_GW")
+		name="Silbo_RD44B-5R_GW"
+		;;	
+	*"Silbo GRD44B-3R_GW")
+		name="Silbo_RD44B-5R_GW"
+		;;	
+	*"Silbo GRD44C-5R_GW")
+		name="Silbo_RD44B-5R_GW"
+		;;	
+	*"Silbo GRD44C-3R_GW")
+		name="Silbo_RD44B-5R_GW"
+		;;
+		
+	*"Silbo PC312_GW")
+		name="Silbo PC312_GW"
+		;;	
+		
+	*"Silbo PC310_GW")
+		name="Silbo PC310_GW"
+		;;	
+		
+	*"Silbo PC311_GW")
+		name="Silbo PC311_GW"
+		;;
+		
+	*"Silbo IAF44-A_GW")
+		name="Silbo IAF44-A_GW"
+		;;
+		
+	*"Silbo IAF44-C_GW")
+	name="Silbo IAF44-C_GW"
+	;;					
+	
+	*"Silbo IAF44-C1_GW")
+		name="Silbo IAF44-A_GW"
+	;;
+		
+	*"Silbo IAF44-C2_GW")
+	name="Silbo IAF44-C2_GW"
+	;;					
+					
 	*"Memory 2 Move")
 		name="m2m"
 		;;

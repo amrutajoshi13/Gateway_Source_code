@@ -259,7 +259,7 @@ Silbo-RC44-EC200A)
 	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
 	;;
 	
-Silbo_IA44-A_GW)
+Silbo_IA44-A)
 	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
 	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
 	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
@@ -267,6 +267,15 @@ Silbo_IA44-A_GW)
 	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
 	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
 	;;	
+	
+Silbo_IA04-A)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;		
 	
 Silbo_IA44-B_GW)
 	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
@@ -284,9 +293,18 @@ Silbo_IA44-C_GW)
 	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
 	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
 	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
-	;;	
+	;;
 	
-Silbo_IAC44-B_GW)
+Silbo_IAC44-A)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;		
+	
+Silbo_IAC44-C_GW)
 	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
 	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
 	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
@@ -303,6 +321,24 @@ Silbo_IAB44-B_GW)
 	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
 	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
 	;;	
+	
+Silbo_IAB44-C_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;		
+	
+Silbo_IAB44-DIO_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;			
 		
 Silbo_IC44_GW)
 	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
@@ -320,7 +356,216 @@ Silbo_GD44-A_GW)
 	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
 	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
 	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;
+	
+Silbo_GD44-B_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;	
+	
+Silbo_GD44-C_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;
+	
+Silbo_GD44-D_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;
+	
+Silbo_GD44-E_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;
+	
+Silbo_RF44-A_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;	
+	
+Silbo_RF04-A_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
 	;;		
+	
+Silbo_RF44-B_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;	
+	
+Silbo_RF44-C_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;				
+				
+
+Silbo_PC312_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;
+
+Silbo_PC310_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;	
+	
+Silbo_PC311_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;		
+	
+	
+Silbo_RB44-A_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;
+	
+Silbo_IE44-B_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;
+	
+Silbo_IE44-C_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;
+	
+Silbo_IE44-C-EX1_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;
+	
+Silbo_GRD44B-5R_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;	
+	
+Silbo_GRD44B-3R_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;
+	
+Silbo_GRD44C-5R_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;	
+	
+Silbo_GRD44C-3R_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;
+	
+Silbo_IAF44-A_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;	
+	
+Silbo_IAF44-C_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;
+												
+Silbo_IAF44-C1_GW)
+	ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+	ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+	ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+	ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+	ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+	ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+	;;	
+	
+Silbo_IAF44-C2_GW)
+ucidef_set_led_wlan "wifi" "wifi" "linkit-smart-7688:orange:wifi" "phy0tpt"
+ucidef_set_led_switch "lan1" "lan1" "u7628-01:green:lan1" "switch0" "0x2"
+ucidef_set_led_switch "lan2" "lan2" "u7628-01:green:lan2" "switch0" "0x4"
+ucidef_set_led_switch "lan3" "lan3" "u7628-01:green:lan3" "switch0" "0x8"
+ucidef_set_led_switch "lan4" "lan4" "u7628-01:green:lan4" "switch0" "0x10"
+ucidef_set_led_switch "wan" "wan" "u7628-01:green:wan" "switch0" "0x01"
+;;												
 		
 m2m)
 	set_wifi_led "$boardname:blue:wifi"

@@ -1,13 +1,13 @@
 /dts-v1/;
 
-#include "invmt7628an.dtsi"
+#include "mt7628an.dtsi"
 
 #include <dt-bindings/gpio/gpio.h>
 #include <dt-bindings/input/input.h>
 
 / {
-	compatible = "SILBO,IA44-B_GW", "mediatek,linkit-smart-7688", "mediatek,invmt7628an-soc", "ralink,mt7628an-soc";
-	model = "Silbo IA44-B_GW";
+	compatible = "Silbo_PC310_GW", "mediatek,linkit-smart-7688", "mediatek,invmt7628an-soc", "ralink,mt7628an-soc";
+	model = "Silbo_PC310_GW";
 
 	aliases {
 		led-boot = &led_wifi;
